@@ -52,3 +52,25 @@ let typed = new Typed(".typed-description", {
   loop: true,
   startDelay: 5000
 });
+
+/*--- ABOUT PAGE SCROLL ANIMATION ---*/
+var scrollTl = new TimelineMax();
+const controller = new ScrollMagic.Controller();
+scrollTl.from("h2", 0.5, { x: "-200", opacity: 0 });
+scrollTl.from("span", 0.5, { width: 0 });
+scrollTl.from(".my-img", 0.5, { x: 200, opacity: 0 });
+scrollTl.from(".about-description", 0.5, { x: -200, opacity: 0 }, "=-0.5");
+scrollTl.from(".skills, .bar-tag, .container-bar", 0.5, { y: 100, opacity: 0 });
+scrollTl.from(
+  ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
+  0.5,
+  { width: 0 }
+);
+const scene = new ScrollMagic.Scene({
+  triggerElement: ".about-page",
+  triggerHook: "onLeave",
+  duration: "80%"
+})
+  .setPin(".about-page")
+  .setTween(scrollTl)
+  .addTo(controller);
