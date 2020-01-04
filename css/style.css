@@ -82,3 +82,88 @@ h3 {
   font-size: 180%;
   font-weight: 300;
 }
+
+/* --------------------------------------- */
+/* ABOUT PAGE */
+/* --------------------------------------- */
+.about-page {
+  height: 100vh;
+}
+
+.my-img img {
+  width: 35%;
+  margin-top: 30px;
+  border-top: 0px;
+  transform-origin: center;
+}
+
+.hey-there {
+  margin-top: 20px;
+  font-size: 140%;
+}
+
+.about-description p {
+  width: 80%;
+  line-height: 1.4;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.container-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #efefef;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+
+.cpp-bar {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f34b7d;
+}
+
+.html-bar {
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #e34c26;
+}
+
+.css-bar {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #563d7c;
+}
+
+.js-bar {
+  width: 25%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f1e05a;
+}
+
+.python-bar {
+  width: 10%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3572a5;
+}
+
+.swift-bar {
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #ffac45;
+}
+
+.java-bar {
+  width: 5%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #b07219;
+}
