@@ -167,3 +167,41 @@ h3 {
   border-radius: 5px;
   background-color: #b07219;
 }
+
+/* --------------------------------------- */
+/* PROJECTS PAGE */
+/* --------------------------------------- */
+.project h3 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.project h3::after {
+  display: block;
+  height: 2px;
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  content: " ";
+  margin-top: 10px;
+}
+
+.project-imgs {
+  position: relative;
+  top: 0;
+  left: 50;
+}
+
+.project-imgs img {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 35%;
+}
+
+.mansion-img1 {
+  z-index: 3;
+}
