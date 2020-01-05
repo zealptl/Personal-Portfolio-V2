@@ -171,6 +171,9 @@ h3 {
 /* --------------------------------------- */
 /* PROJECTS PAGE */
 /* --------------------------------------- */
+.project {
+  height: 100vh;
+}
 .project h3 {
   width: 50%;
   margin: 0 auto;
@@ -192,6 +195,7 @@ h3 {
   position: relative;
   top: 0;
   left: 50;
+  margin-top: 50px;
 }
 
 .project-imgs img {
@@ -204,4 +208,16 @@ h3 {
 
 .mansion-img1 {
   z-index: 3;
+}
+
+.mansion-img4 {
+  transform: translate(-110%, 110%);
+}
+
+.mansion-img5 {
+  transform: translateY(110%);
+}
+
+.mansion-img6 {
+  transform: translate(110%, 110%);
 }

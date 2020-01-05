@@ -54,23 +54,45 @@ let typed = new Typed(".typed-description", {
 });
 
 /*--- ABOUT PAGE SCROLL ANIMATION ---*/
-var scrollTl = new TimelineMax();
-const controller = new ScrollMagic.Controller();
-scrollTl.from("h2", 0.5, { x: "-200", opacity: 0 });
-scrollTl.from("span", 0.5, { width: 0 });
-scrollTl.from(".my-img", 0.5, { x: 200, opacity: 0 });
-scrollTl.from(".about-description", 0.5, { x: -200, opacity: 0 }, "=-0.5");
-scrollTl.from(".skills, .bar-tag, .container-bar", 0.5, { y: 100, opacity: 0 });
-scrollTl.from(
+var aboutScrollTl = new TimelineMax();
+const aboutController = new ScrollMagic.Controller();
+aboutScrollTl.from("h2", 0.5, { x: "-200", opacity: 0 });
+aboutScrollTl.from("span", 0.5, { width: 0 });
+aboutScrollTl.from(".my-img", 0.5, { x: 200, opacity: 0 });
+aboutScrollTl.from(".about-description", 0.5, { x: -200, opacity: 0 }, "=-0.5");
+aboutScrollTl.from(".skills, .bar-tag, .container-bar", 0.5, {
+  y: 100,
+  opacity: 0
+});
+aboutScrollTl.from(
   ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
   0.5,
   { width: 0 }
 );
-const scene = new ScrollMagic.Scene({
+const aboutScene = new ScrollMagic.Scene({
   triggerElement: ".about-page",
   triggerHook: "onLeave",
   duration: "80%"
 })
   .setPin(".about-page")
-  .setTween(scrollTl)
-  .addTo(controller);
+  .setTween(aboutScrollTl)
+  .addTo(aboutController);
+
+/*--- MANSION SCROLL ANIMATION ---*/
+var mansionTl = new TimelineMax();
+const mansionController = new ScrollMagic.Controller();
+mansionTl.from("h3", 0.5, { y: 100, opacity: 0 });
+mansionTl.from(".project-imgs", 0.5, { scale: 3, opacity: 0 });
+mansionTl.to(".mansion-img2", 0.5, { x: "-110%" });
+mansionTl.to(".mansion-img3", 0.5, { x: "110%" }, "-=0.5");
+mansionTl.from(".mansion-img4, .mansion-img5, .mansion-img6", 0.5, {
+  opacity: 0
+});
+const mansionScene = new ScrollMagic.Scene({
+  triggerElement: ".project",
+  triggerHook: "onLeave",
+  duration: "80%"
+})
+  .setPin(".project")
+  .setTween(mansionTl)
+  .addTo(mansionController);
