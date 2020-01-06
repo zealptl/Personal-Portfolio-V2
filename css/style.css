@@ -202,6 +202,7 @@ h3 {
   display: flex;
   width: 30%;
   margin: 18px 0;
+  height: auto;
 }
 
 .mansion-1 {
@@ -230,6 +231,7 @@ h3 {
   display: flex;
   width: 30%;
   margin: 18px 0;
+  height: auto;
 }
 
 .gaming-1 {
