@@ -81,18 +81,18 @@ const aboutScene = new ScrollMagic.Scene({
 /*--- MANSION SCROLL ANIMATION ---*/
 var mansionTl = new TimelineMax();
 const mansionController = new ScrollMagic.Controller();
-mansionTl.from("h3", 0.5, { y: 100, opacity: 0 });
-mansionTl.from(".project-imgs", 0.5, { scale: 3, opacity: 0 });
-mansionTl.to(".mansion-img2", 0.5, { x: "-110%" });
-mansionTl.to(".mansion-img3", 0.5, { x: "110%" }, "-=0.5");
-mansionTl.from(".mansion-img4, .mansion-img5, .mansion-img6", 0.5, {
+mansionTl.from(".mansion-1, .mansion-2, .mansion-3", 1, {
+  scale: 3,
   opacity: 0
 });
+mansionTl.to(".mansion-2, .mansion-3", 1, { x: 0 });
+mansionTl.from(".mansion-4,.mansion-5, .mansion-6", 1, { y: 100, opacity: 0 });
+
 const mansionScene = new ScrollMagic.Scene({
-  triggerElement: ".project",
+  triggerElement: ".mansion-container",
   triggerHook: "onLeave",
   duration: "80%"
 })
-  .setPin(".project")
+  .setPin(".mansion-container")
   .setTween(mansionTl)
   .addTo(mansionController);

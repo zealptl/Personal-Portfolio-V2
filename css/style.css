@@ -41,8 +41,19 @@ span {
 
 h3 {
   font-weight: 200;
-  font-size: 150%;
-  padding: 10px 0;
+  font-size: 180%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h3::after {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  content: " ";
+  width: 300px;
+  margin: 0 auto;
 }
 
 /* --------------------------------------- */
@@ -171,53 +182,30 @@ h3 {
 /* --------------------------------------- */
 /* PROJECTS PAGE */
 /* --------------------------------------- */
-.project {
-  height: 100vh;
-}
-.project h3 {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 40px;
+.mansion-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.project h3::after {
-  display: block;
-  height: 2px;
-  width: 400px;
-  margin: 0 auto;
-  background-color: #fff;
-  content: " ";
-  margin-top: 10px;
+.mansion-container h3 {
+  width: 100%;
 }
 
-.project-imgs {
-  position: relative;
-  top: 0;
-  left: 50;
-  margin-top: 50px;
-}
-
-.project-imgs img {
+.mansion-container img {
+  display: flex;
   width: 30%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 35%;
+  margin: 18px 0;
 }
 
-.mansion-img1 {
-  z-index: 3;
+.mansion-1 {
+  z-index: 1;
 }
 
-.mansion-img4 {
-  transform: translate(-110%, 110%);
+.mansion-2 {
+  transform: translateX(108.5%);
 }
 
-.mansion-img5 {
-  transform: translateY(110%);
-}
-
-.mansion-img6 {
-  transform: translate(110%, 110%);
+.mansion-3 {
+  transform: translateX(-108.5%);
 }
