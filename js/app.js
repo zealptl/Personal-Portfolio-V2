@@ -56,8 +56,8 @@ let typed = new Typed(".typed-description", {
 /*--- ABOUT PAGE SCROLL ANIMATION ---*/
 var aboutScrollTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
-aboutScrollTl.from("h2", 0.5, { x: "-200", opacity: 0 });
-aboutScrollTl.from("span", 0.5, { width: 0 });
+aboutScrollTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
+aboutScrollTl.from(".about-underline", 0.5, { width: 0 });
 aboutScrollTl.from(".my-img", 0.5, { x: 200, opacity: 0 });
 aboutScrollTl.from(".about-description", 0.5, { x: -200, opacity: 0 }, "=-0.5");
 aboutScrollTl.from(".skills, .bar-tag, .container-bar", 0.5, {
@@ -81,12 +81,16 @@ const aboutScene = new ScrollMagic.Scene({
 /*--- MANSION SCROLL ANIMATION ---*/
 var mansionTl = new TimelineMax();
 const mansionController = new ScrollMagic.Controller();
-mansionTl.from(".mansion-1, .mansion-2, .mansion-3", 1, {
+mansionTl.from(".mansion-title", 0.5, { y: 100, opacity: 0 });
+mansionTl.from(".mansion-1, .mansion-2, .mansion-3", 0.5, {
   scale: 3,
   opacity: 0
 });
-mansionTl.to(".mansion-2, .mansion-3", 1, { x: 0 });
-mansionTl.from(".mansion-4,.mansion-5, .mansion-6", 1, { y: 100, opacity: 0 });
+mansionTl.to(".mansion-2, .mansion-3", 0.5, { x: 0 });
+mansionTl.from(".mansion-4,.mansion-5, .mansion-6", 0.5, {
+  y: 100,
+  opacity: 0
+});
 
 const mansionScene = new ScrollMagic.Scene({
   triggerElement: ".mansion-container",
@@ -96,3 +100,26 @@ const mansionScene = new ScrollMagic.Scene({
   .setPin(".mansion-container")
   .setTween(mansionTl)
   .addTo(mansionController);
+
+/*--- GAMING SCROLL ANIMATION ---*/
+var gamingTl = new TimelineMax();
+const gamingController = new ScrollMagic.Controller();
+gamingTl.from(".gaming-title", 0.5, { y: 100, opacity: 0 });
+gamingTl.from(".gaming-1, .gaming-2, .gaming-3", 0.5, {
+  scale: 3,
+  opacity: 0
+});
+gamingTl.to(".gaming-2, .gaming-3", 0.5, { x: 0 });
+gamingTl.from(".gaming-4,.gaming-5, .gaming-6", 0.5, {
+  y: 100,
+  opacity: 0
+});
+
+const gamingScene = new ScrollMagic.Scene({
+  triggerElement: ".gaming-container",
+  triggerHook: "onLeave",
+  duration: "80%"
+})
+  .setPin(".gaming-container")
+  .setTween(gamingTl)
+  .addTo(gamingController);
