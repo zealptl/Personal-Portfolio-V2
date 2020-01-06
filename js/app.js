@@ -93,11 +93,8 @@ mansionTl.from(".mansion-4,.mansion-5, .mansion-6", 0.5, {
 });
 
 const mansionScene = new ScrollMagic.Scene({
-  triggerElement: ".mansion-container",
-  triggerHook: "onLeave",
-  duration: "80%"
+  triggerElement: ".mansion-container"
 })
-  .setPin(".mansion-container")
   .setTween(mansionTl)
   .addTo(mansionController);
 
@@ -116,10 +113,7 @@ gamingTl.from(".gaming-4,.gaming-5, .gaming-6", 0.5, {
 });
 
 const gamingScene = new ScrollMagic.Scene({
-  triggerElement: ".gaming-container",
-  triggerHook: "onLeave",
-  duration: "80%"
+  triggerElement: ".gaming-container"
 })
-  .setPin(".gaming-container")
   .setTween(gamingTl)
   .addTo(gamingController);
