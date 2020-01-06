@@ -71,10 +71,7 @@ aboutScrollTl.from(
 );
 const aboutScene = new ScrollMagic.Scene({
   triggerElement: ".about-page",
-  triggerHook: "onLeave",
-  duration: "80%"
 })
-  .setPin(".about-page")
   .setTween(aboutScrollTl)
   .addTo(aboutController);
 
