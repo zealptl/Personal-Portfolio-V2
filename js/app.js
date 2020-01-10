@@ -89,6 +89,8 @@ function imageGallery() {
     preview.addEventListener("click", function() {
       var smallSrc = this.src;
       hightlight.src = smallSrc;
+      previews.forEach(preview => preview.classList.remove("project-active"));
+      preview.classList.add("project-active");
     });
   });
 }
