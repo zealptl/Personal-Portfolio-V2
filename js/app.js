@@ -81,3 +81,16 @@ const aboutScene = new ScrollMagic.Scene({
   .addTo(aboutController);
 
 /*--- IMAGE GALLERY ---*/
+function imageGallery() {
+  var hightlight = document.querySelector(".gallery-highlight");
+  var previews = document.querySelectorAll(".project-preview img");
+
+  previews.forEach(preview => {
+    preview.addEventListener("click", function() {
+      var smallSrc = this.src;
+      hightlight.src = smallSrc;
+    });
+  });
+}
+
+imageGallery();
