@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/Grid.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Zeal Patel</title>
@@ -140,29 +141,32 @@
       </div>
     </section>
     <section class="projects-page">
-        <div class="row">
+        <div class="row">          
             <h2 class="projects-title page-title">Projects<spa class="projects-underline underline"></span></h2>
         </div>
-        <div class="mansion-container">
-          <h3 class="mansion-title project-title">The Mansion</h3>
-          <img src="img/Mansion2.jpg" alt="Mansion Image" class="mansion-2">
-          <img src="img/Mansion1.jpg" alt="Mansion Image" class="mansion-1">
-          <img src="img/Mansion3.jpg" alt="Mansion Image" class="mansion-3">
-          <img src="img/Mansion4.jpg" alt="Mansion Image" class="mansion-4">
-          <img src="img/Mansion5.jpg" alt="Mansion Image" class="mansion-5">
-          <img src="img/Mansion6.jpg" alt="Mansion Image" class="mansion-6">
-        </div>
-        <div class="gaming-container">
-          <h3 class="gaming-title project-title">Gaming Room</h3>
-          <img src="img/Gaming2.jpeg" alt="Gaming Room Image" class="gaming-2">
-          <img src="img/Gaming1.jpeg" alt="Gaming Room Image" class="gaming-1">
-          <img src="img/Gaming3.jpeg" alt="Gaming Room Image" class="gaming-3">
-          <img src="img/Gaming4.jpeg" alt="Gaming Room Image" class="gaming-4">
-          <img src="img/Gaming5.jpeg" alt="Gaming Room Image" class="gaming-5">
-          <img src="img/Gaming6.jpeg" alt="Gaming Room Image" class="gaming-6">
-
+        <div class="project-container">
+          <h3 class="project-title">The Mansion</h3>
+          <div class="project-gallery">
+            <div class="project-preview">
+              <i class="ion-ios-arrow-back"></i>
+              <img src="img/Mansion1.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+              <img src="img/Mansion2.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+              <img src="img/Mansion3.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+              <img src="img/Mansion4.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+              <img src="img/Mansion5.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+              <img src="img/Mansion6.jpg" alt="The Mansion Image" onclick="imageGallery(this)">
+            </div>
+            <img src="img/Mansion1.jpg" alt="The Mansion Image" class="gallery-highlight">
+            <i class="ion-ios-arrow-forward"></i>
+          </div>
+          <div class="project-description">
+            <p>Luxury. One word kept in mind throughout the design stage of this ultimate six bedrooms, 7.5 bathrooms mansion.
+               The villa features floor to ceiling windows to provide as much natural light as possible. It comes with an arcade center,
+              theater, a glass room for night gazing, bar, study, library, and pool.</p>
+          </div>
         </div>
     </section>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
