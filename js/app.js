@@ -81,9 +81,9 @@ const aboutScene = new ScrollMagic.Scene({
   .addTo(aboutController);
 
 /*--- IMAGE GALLERY ---*/
-function imageGallery() {
-  var hightlight = document.querySelector(".gallery-highlight");
-  var previews = document.querySelectorAll(".project-preview img");
+function imageGallery(projectHighlight, projectPreview) {
+  var hightlight = document.querySelector(projectHighlight);
+  var previews = document.querySelectorAll(projectPreview);
 
   previews.forEach(preview => {
     preview.addEventListener("click", function() {
@@ -95,4 +95,9 @@ function imageGallery() {
   });
 }
 
-imageGallery();
+imageGallery(".mansion-highlight", ".mansion-preview img");
+imageGallery(".gaming-highlight", ".gaming-preview img");
+imageGallery(".design-highlight", ".design-preview img");
+imageGallery(".living-highlight", ".living-preview img");
+imageGallery(".bushwick-highlight", ".bushwick-preview img");
+imageGallery(".bqx-highlight", ".bqx-preview img");

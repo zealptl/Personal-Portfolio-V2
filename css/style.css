@@ -191,9 +191,9 @@ i {
 }
 
 .project-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 30px 0;
 }
 
 .project-gallery {
@@ -217,20 +217,6 @@ i {
   position: relative;
 }
 
-.ion-ios-arrow-back {
-  position: absolute;
-  top: 50%;
-  right: 70%;
-  transform: translate(-70%, -50%);
-}
-
-.ion-ios-arrow-forward {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translate(-5%, -50%);
-}
-
 .project-preview img {
   display: flex;
   width: 40%;
@@ -241,7 +227,7 @@ i {
   transition: all 0.3s ease;
 }
 
-.project-preview img:nth-child(2) {
+.project-preview img:nth-child(1) {
   margin-top: 0;
 }
 
