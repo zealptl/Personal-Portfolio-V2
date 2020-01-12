@@ -102,3 +102,10 @@ imageGallery(".living-highlight", ".living-preview img");
 imageGallery(".bushwick-highlight", ".bushwick-preview img");
 imageGallery(".bqx-highlight", ".bqx-preview img");
 imageGallery(".smallpox-highlight", ".smallpox-preview img");
+
+/*--- CAROUSEL ---*/
+new Glider(document.querySelector(".glider"), {
+  slidesToshow: 3,
+  draggable: true,
+  dots: ".dots"
+});
