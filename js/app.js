@@ -8,7 +8,7 @@ strokeTl.add({
   targets: ".svg-hero-text path",
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 1125,
-  delay: function(el, i) {
+  delay: function (el, i) {
     return i * 125;
   }
 });
@@ -22,7 +22,7 @@ strokeTl.add({
   targets: ".svg-logo path",
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 500,
-  delay: function(el, i) {
+  delay: function (el, i) {
     return i * 125;
   }
 });
@@ -86,7 +86,7 @@ function imageGallery(projectHighlight, projectPreview) {
   var previews = document.querySelectorAll(projectPreview);
 
   previews.forEach(preview => {
-    preview.addEventListener("click", function() {
+    preview.addEventListener("click", function () {
       var smallSrc = this.src;
       hightlight.src = smallSrc;
       previews.forEach(preview => preview.classList.remove("project-active"));
@@ -113,5 +113,5 @@ new Glider(document.querySelector(".glider"), {
   arrows: {
     prev: ".glider-prev",
     next: ".glider-next"
-  }
+  },
 });

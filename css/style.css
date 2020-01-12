@@ -1,3 +1,5 @@
+/*--- ACCENT COLOR: #fa8231 ---*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 18px;
+  scroll-snap-type: y proximity;
 }
 
 /* --------------------------------------- */
@@ -22,21 +25,8 @@ body {
 }
 
 section {
-  padding: 60px 0;
-}
-
-.page-title {
-  font-weight: 300;
-  font-size: 180%;
-  text-align: left;
-}
-
-.underline {
-  width: 100%;
-  background-color: #fa8231;
-  display: block;
-  height: 2px;
-  margin-top: 10px;
+  padding: 40px 0;
+  scroll-snap-align: start;
 }
 
 h3 {
@@ -101,6 +91,20 @@ a {
 /* --------------------------------------- */
 .about-page {
   height: 100vh;
+}
+
+.page-title {
+  font-weight: 300;
+  font-size: 180%;
+  text-align: left;
+}
+
+.underline {
+  width: 100%;
+  background-color: #fa8231;
+  display: block;
+  height: 2px;
+  margin-top: 10px;
 }
 
 .my-img img {
@@ -184,11 +188,14 @@ a {
   background-color: #000;
 }
 
+.projects-title {
+  margin-top: -20px;
+}
+
 .project-title {
   font-weight: 200;
   font-size: 180%;
   text-align: center;
-  margin-top: -40px;
 }
 
 .project-title::after {
@@ -196,14 +203,14 @@ a {
   height: 2px;
   background-color: #fa8231;
   content: " ";
-  width: 300px;
-  margin: 0 auto;
+  width: 100px;
+  margin: 5px auto 0 auto;
 }
 
 .project-container {
   display: flex;
   flex-direction: column;
-  margin: 30px 0;
+  margin-bottom: 20px;
 }
 
 .project-gallery {
@@ -214,9 +221,9 @@ a {
 
 .gallery-highlight {
   position: relative;
-  width: 60%;
+  width: 50%;
   height: auto;
-  margin-right: 15%;
+  margin-right: 20%;
 }
 
 .project-preview {
@@ -229,7 +236,7 @@ a {
 
 .project-preview img {
   display: flex;
-  width: 40%;
+  width: 28%;
   margin-top: 2%;
   margin-right: 2%;
   opacity: 0.5;
