@@ -101,3 +101,4 @@ imageGallery(".design-highlight", ".design-preview img");
 imageGallery(".living-highlight", ".living-preview img");
 imageGallery(".bushwick-highlight", ".bushwick-preview img");
 imageGallery(".bqx-highlight", ".bqx-preview img");
+imageGallery(".smallpox-highlight", ".smallpox-preview img");
