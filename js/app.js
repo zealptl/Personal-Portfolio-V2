@@ -108,6 +108,8 @@ new Glider(document.querySelector(".glider"), {
   slidesToshow: 1,
   dots: ".dots",
   rewind: true,
+  scrollLock: true,
+  scrollLockDelay: 100,
   arrows: {
     prev: ".glider-prev",
     next: ".glider-next"
