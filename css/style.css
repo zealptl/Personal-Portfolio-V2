@@ -46,7 +46,16 @@ h3 {
 }
 
 i {
-  font-size: 200%;
+  font-size: 150%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* --------------------------------------- */
@@ -259,4 +268,79 @@ img.project-active {
 .glider-prev i:focus,
 .glider-next i:focus {
   color: #fa8231;
+}
+
+/* --------------------------------------- */
+/* FOOTER */
+/* --------------------------------------- */
+
+footer {
+  background-color: #151515;
+  padding: 20px;
+  font-size: 90%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+  color: #dedede;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 130%;
+  vertical-align: middle;
+}
+
+.ion-social-linkedin,
+.ion-social-github {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.ion-social-linkedin:hover {
+  color: #007bb5;
+}
+
+.ion-social-github:hover {
+  color: #f4cbb2;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 20px;
 }
