@@ -105,7 +105,11 @@ imageGallery(".smallpox-highlight", ".smallpox-preview img");
 
 /*--- CAROUSEL ---*/
 new Glider(document.querySelector(".glider"), {
-  slidesToshow: 3,
-  draggable: true,
-  dots: ".dots"
+  slidesToshow: 1,
+  dots: ".dots",
+  rewind: true,
+  arrows: {
+    prev: ".glider-prev",
+    next: ".glider-next"
+  }
 });

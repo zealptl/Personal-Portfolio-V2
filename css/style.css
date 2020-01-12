@@ -46,22 +46,7 @@ h3 {
 }
 
 i {
-  font-size: 300%;
-}
-
-.project-title {
-  font-weight: 200;
-  font-size: 180%;
-  text-align: center;
-}
-
-.project-title::after {
-  display: block;
-  height: 2px;
-  background-color: #fa8231;
-  content: " ";
-  width: 300px;
-  margin: 0 auto;
+  font-size: 200%;
 }
 
 /* --------------------------------------- */
@@ -190,6 +175,21 @@ i {
   background-color: #000;
 }
 
+.project-title {
+  font-weight: 200;
+  font-size: 180%;
+  text-align: center;
+}
+
+.project-title::after {
+  display: block;
+  height: 2px;
+  background-color: #fa8231;
+  content: " ";
+  width: 300px;
+  margin: 0 auto;
+}
+
 .project-container {
   display: flex;
   flex-direction: column;
@@ -239,4 +239,23 @@ img.project-active {
   width: 70%;
   margin: 30px auto 0 auto;
   text-align: justify;
+}
+
+.icon-left {
+  position: absolute;
+  left: 5%;
+  top: 42%;
+}
+
+.icon-right {
+  position: absolute;
+  right: 5%;
+  top: 42%;
+}
+
+.glider-prev i:hover,
+.glider-next i:hover,
+.glider-prev i:focus,
+.glider-next i:focus {
+  color: #fa8231;
 }
