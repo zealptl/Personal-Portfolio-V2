@@ -53,13 +53,13 @@ let typed = new Typed(".typed-description", {
 });
 
 /*--- ABOUT PAGE SCROLL ANIMATION ---*/
-var aboutScrollTl = new TimelineMax();
+var aboutTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
-aboutScrollTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
-aboutScrollTl.from(".about-underline", 0.5, { width: 0 });
-aboutScrollTl.from(".my-img", 0.5, { y: 50, opacity: 0 });
-aboutScrollTl.from(".about-description", 0.5, { y: 50, opacity: 0 }, "=-0.5");
-aboutScrollTl.from(
+aboutTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
+aboutTl.from(".about-underline", 0.5, { width: 0 });
+aboutTl.from(".my-img", 0.5, { y: 50, opacity: 0 });
+aboutTl.from(".about-description", 0.5, { y: 50, opacity: 0 }, "=-0.5");
+aboutTl.from(
   ".skills, .bar-tag, .container-bar",
   0.5,
   {
@@ -68,7 +68,7 @@ aboutScrollTl.from(
   },
   "-=0.5"
 );
-aboutScrollTl.from(
+aboutTl.from(
   ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
   0.5,
   { width: 0 }
@@ -76,8 +76,37 @@ aboutScrollTl.from(
 const aboutScene = new ScrollMagic.Scene({
   triggerElement: ".about-page"
 })
-  .setTween(aboutScrollTl)
+  .setTween(aboutTl)
   .addTo(aboutController);
+
+/*--- PROJECTS PAGE SCROLL ANIMATION ---*/
+var projectsTl = new TimelineMax();
+const projectsController = new ScrollMagic.Controller();
+projectsTl.from(".projects-title", 0.5, { x: -200, opacity: 0 });
+projectsTl.from(".projects-underline", 0.5, { width: 0 });
+projectsTl.from(".project-container", 0.5, { y: 50, opacity: 0 });
+projectsTl.from(".dots", 0.5, { opacity: 0 });
+projectsTl.fromTo(
+  ".icon-left, .icon-right",
+  2.5,
+  {
+    y: -100,
+    opacity: 0,
+    scale: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
+    scale: 1.5,
+    ease: Elastic.easeOut.config(1, 0.3)
+  }
+);
+
+const projectsScene = new ScrollMagic.Scene({
+  triggerElement: ".projects-page"
+})
+  .setTween(projectsTl)
+  .addTo(projectsController);
 
 /*--- IMAGE GALLERY ---*/
 function imageGallery(projectHighlight, projectPreview) {
