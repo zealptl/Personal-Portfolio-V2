@@ -1,6 +1,6 @@
 /*--- SVG STOKE  ANIMATION ---*/
 let strokeTl = anime.timeline({
-  duration: 150,
+  duration: 100,
   easing: "easeInSine"
 });
 
@@ -8,7 +8,7 @@ strokeTl.add({
   targets: ".svg-hero-text path",
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 1125,
-  delay: function (el, i) {
+  delay: function(el, i) {
     return i * 125;
   }
 });
@@ -21,9 +21,9 @@ strokeTl.add({
 strokeTl.add({
   targets: ".svg-logo path",
   strokeDashoffset: [anime.setDashoffset, 0],
-  duration: 500,
-  delay: function (el, i) {
-    return i * 125;
+  duration: 400,
+  delay: function(el, i) {
+    return i * 100;
   }
 });
 
@@ -35,8 +35,7 @@ strokeTl.add({
 /*--- LOGO EXPANSION ANIMATION ---*/
 let expandTl = new TimelineMax();
 
-expandTl.delay(3.8);
-
+expandTl.delay(3);
 expandTl.to(".top-semi-circ", 0.4, { y: "-90px" });
 expandTl.to(".bottom-semi-circ", 0.4, { y: "90px" }, "-=0.4");
 expandTl.to(".left-triangle", 0.3, { x: "-27px" });
@@ -50,7 +49,7 @@ let typed = new Typed(".typed-description", {
   backSpeed: 40,
   showCursor: false,
   loop: true,
-  startDelay: 5000
+  startDelay: 4000
 });
 
 /*--- ABOUT PAGE SCROLL ANIMATION ---*/
@@ -58,13 +57,13 @@ var aboutScrollTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
 aboutScrollTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
 aboutScrollTl.from(".about-underline", 0.5, { width: 0 });
-aboutScrollTl.from(".my-img", 0.5, { x: -50, opacity: 0 });
-aboutScrollTl.from(".about-description", 0.5, { x: -50, opacity: 0 }, "=-0.5");
+aboutScrollTl.from(".my-img", 0.5, { y: 50, opacity: 0 });
+aboutScrollTl.from(".about-description", 0.5, { y: 50, opacity: 0 }, "=-0.5");
 aboutScrollTl.from(
   ".skills, .bar-tag, .container-bar",
   0.5,
   {
-    x: 50,
+    y: 50,
     opacity: 0
   },
   "-=0.5"
@@ -86,7 +85,7 @@ function imageGallery(projectHighlight, projectPreview) {
   var previews = document.querySelectorAll(projectPreview);
 
   previews.forEach(preview => {
-    preview.addEventListener("click", function () {
+    preview.addEventListener("click", function() {
       var smallSrc = this.src;
       hightlight.src = smallSrc;
       previews.forEach(preview => preview.classList.remove("project-active"));
@@ -113,5 +112,5 @@ new Glider(document.querySelector(".glider"), {
   arrows: {
     prev: ".glider-prev",
     next: ".glider-next"
-  },
+  }
 });
