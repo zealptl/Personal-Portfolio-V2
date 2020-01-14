@@ -25,17 +25,11 @@ logoTl.add({
 });
 
 logoTl.add({
-  targets: ".svg-logo path",
-  strokeDashoffset: [anime.setDashoffset, 0],
-  duration: 400,
-  delay: function(el, i) {
-    return i * 100;
-  }
-});
-
-logoTl.add({
   targets: ".svg-logo",
-  fill: "#fff"
+  duration: 1000,
+  translateY: ["-100%", "-15%"],
+  translateX: ["-50%", "-50%"],
+  easing: "easeOutBack"
 });
 
 logoTl.add({
