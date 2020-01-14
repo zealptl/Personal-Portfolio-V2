@@ -1,3 +1,9 @@
+/*--- PRELOADER ---*/
+window.addEventListener("load", function() {
+  const preloader = document.querySelectorAll(".preloader");
+  preloader.classList.add("preloader-finish");
+});
+
 /*--- SVG STOKE  ANIMATION ---*/
 let logoTl = anime.timeline({
   duration: 100,
