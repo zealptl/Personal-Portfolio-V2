@@ -1,10 +1,10 @@
 /*--- SVG STOKE  ANIMATION ---*/
-let strokeTl = anime.timeline({
+let logoTl = anime.timeline({
   duration: 100,
   easing: "easeInSine"
 });
 
-strokeTl.add({
+logoTl.add({
   targets: ".svg-hero-text path",
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 1125,
@@ -13,12 +13,12 @@ strokeTl.add({
   }
 });
 
-strokeTl.add({
+logoTl.add({
   targets: ".svg-hero-text",
   fill: "#fff"
 });
 
-strokeTl.add({
+logoTl.add({
   targets: ".svg-logo path",
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 400,
@@ -27,19 +27,40 @@ strokeTl.add({
   }
 });
 
-strokeTl.add({
+logoTl.add({
   targets: ".svg-logo",
   fill: "#fff"
 });
 
-/*--- LOGO EXPANSION ANIMATION ---*/
-let expandTl = new TimelineMax();
+logoTl.add({
+  targets: ".top-semi-circ",
+  duration: 300,
+  translateY: "-90px"
+});
 
-expandTl.delay(3);
-expandTl.to(".top-semi-circ", 0.4, { y: "-90px" });
-expandTl.to(".bottom-semi-circ", 0.4, { y: "90px" }, "-=0.4");
-expandTl.to(".left-triangle", 0.3, { x: "-27px" });
-expandTl.to(".right-triangle", 0.3, { x: "27px" }, "-=0.3");
+logoTl.add(
+  {
+    targets: ".bottom-semi-circ",
+    duration: 300,
+    translateY: "90px"
+  },
+  "-=300"
+);
+
+logoTl.add({
+  targets: ".left-triangle",
+  duration: 250,
+  translateX: "-27px"
+});
+
+logoTl.add(
+  {
+    targets: ".right-triangle",
+    duration: 250,
+    translateX: "27px"
+  },
+  "-=250"
+);
 
 /*--- TYPED DESCRIPTION ANIMATION ---*/
 let typed = new Typed(".typed-description", {
