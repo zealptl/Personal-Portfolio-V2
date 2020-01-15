@@ -1,9 +1,3 @@
-/*--- PRELOADER ---*/
-window.addEventListener("load", function() {
-  const preloader = document.querySelectorAll(".preloader");
-  preloader.classList.add("preloader-finish");
-});
-
 /*--- SVG STOKE  ANIMATION ---*/
 let logoTl = anime.timeline({
   duration: 100,
@@ -78,17 +72,11 @@ var aboutTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
 aboutTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
 aboutTl.from(".about-underline", 0.5, { width: 0 });
-aboutTl.from(".my-img", 0.5, { y: 50, opacity: 0 });
-aboutTl.from(".about-description", 0.5, { y: 50, opacity: 0 }, "=-0.5");
-aboutTl.from(
-  ".skills, .bar-tag, .container-bar",
-  0.5,
-  {
-    y: 50,
-    opacity: 0
-  },
-  "-=0.5"
-);
+aboutTl.from(".about-container", 0.8, {
+  y: 100,
+  opacity: 0,
+  ease: Back.easeOut.config(1.7)
+});
 aboutTl.from(
   ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
   0.5,
@@ -105,11 +93,15 @@ var projectsTl = new TimelineMax();
 const projectsController = new ScrollMagic.Controller();
 projectsTl.from(".projects-title", 0.5, { x: -200, opacity: 0 });
 projectsTl.from(".projects-underline", 0.5, { width: 0 });
-projectsTl.from(".project-container", 0.5, { y: 50, opacity: 0 });
+projectsTl.from(".project-container", 0.8, {
+  y: 100,
+  opacity: 0,
+  ease: Back.easeOut.config(1.7)
+});
 projectsTl.from(".dots", 0.5, { opacity: 0 });
 projectsTl.fromTo(
   ".icon-left, .icon-right",
-  2.5,
+  0.8,
   {
     y: -100,
     opacity: 0,
@@ -119,7 +111,7 @@ projectsTl.fromTo(
     y: 0,
     opacity: 1,
     scale: 1.5,
-    ease: Elastic.easeOut.config(1, 0.3)
+    ease: Back.easeOut.config(1.7)
   }
 );
 
