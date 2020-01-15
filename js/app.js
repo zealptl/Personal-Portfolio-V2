@@ -21,8 +21,9 @@ logoTl.add({
 logoTl.add({
   targets: ".svg-logo",
   duration: 1000,
-  translateY: ["-100%", "-15%"],
+  translateY: ["-75%", "-15%"],
   translateX: ["-50%", "-50%"],
+  opacity: [0, 1],
   easing: "easeOutBack"
 });
 
