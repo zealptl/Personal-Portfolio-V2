@@ -135,36 +135,42 @@ a {
 .python-bar,
 .swift-bar,
 .java-bar {
-  width: 60%;
   height: 100%;
   border-radius: 5px;
 }
 
 .cpp-bar {
+  width: 50%;
   background-color: #f34b7d;
 }
 
 .html-bar {
+  width: 70%;
   background-color: #e34c26;
 }
 
 .css-bar {
+  width: 65%;
   background-color: #563d7c;
 }
 
 .js-bar {
+  width: 30%;
   background-color: #f1e05a;
 }
 
 .python-bar {
+  width: 10%;
   background-color: #3572a5;
 }
 
 .swift-bar {
+  width: 20%;
   background-color: #ffac45;
 }
 
 .java-bar {
+  width: 10%;
   background-color: #b07219;
 }
 
