@@ -54,6 +54,7 @@ a {
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
+  padding-top: 0;
 }
 
 .svg-logo {
@@ -87,9 +88,6 @@ a {
 /* --------------------------------------- */
 /* ABOUT PAGE */
 /* --------------------------------------- */
-.about-page {
-  height: 100vh;
-}
 
 .page-title {
   font-weight: 300;
@@ -130,52 +128,43 @@ a {
   border-radius: 5px;
 }
 
-.cpp-bar {
+.cpp-bar,
+.html-bar,
+.css-bar,
+.js-bar,
+.python-bar,
+.swift-bar,
+.java-bar {
   width: 60%;
-  height: 30px;
+  height: 100%;
   border-radius: 5px;
+}
+
+.cpp-bar {
   background-color: #f34b7d;
 }
 
 .html-bar {
-  width: 70%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #e34c26;
 }
 
 .css-bar {
-  width: 60%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #563d7c;
 }
 
 .js-bar {
-  width: 25%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #f1e05a;
 }
 
 .python-bar {
-  width: 10%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #3572a5;
 }
 
 .swift-bar {
-  width: 20%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #ffac45;
 }
 
 .java-bar {
-  width: 5%;
-  height: 30px;
-  border-radius: 5px;
   background-color: #b07219;
 }
 
