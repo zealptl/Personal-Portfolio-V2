@@ -1,16 +1,27 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+  .row {
+    padding: 0 4%;
+  }
+}
+
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
   html,
-  bosy {
+  body {
     font-size: 15px;
   }
   /*--- RESUABLE COMPONENT ---*/
   .row {
-    width: 650px;
+    padding: 0 10%;
+  }
+  /*--- ABOUT PAGE ---*/
+
+  .my-img img {
+    width: 40%;
   }
 
-  /*--- ABOUT PAGE ---*/
-  .underline {
+  .about-description p {
     width: 100%;
   }
 
@@ -18,7 +29,59 @@
     font-size: 120%;
   }
 
+  /*--- PROJECTS PAGE ---*/
   .container-bar {
     height: 25px;
+  }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+/* iPhone 6/7/8+ */
+@media only screen and (max-width: 414px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  /*--- LANDING PAGE ---*/
+  .logo-container {
+    transform: scale(0.9);
+    position: absolute;
+    top: 15%;
+    left: 50%;
+  }
+
+  .hero-text-container {
+    transform: scale(0.65);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+  }
+
+  /*--- ABOUT PAGE ---*/
+  .container-bar {
+    height: 25px;
+  }
+
+  .icon-left,
+  .icon-right {
+    top: 25%;
+  }
+
+  .icon-left i,
+  .icon-right i {
+    font-size: 180%;
+  }
+
+  /*--- FOOTER ---*/
+  .social-links {
+    width: 50%;
   }
 }

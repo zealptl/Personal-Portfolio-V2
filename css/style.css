@@ -24,7 +24,8 @@ body {
 }
 
 section {
-  padding: 40px 0;
+  padding: 60px 0;
+  overflow: hidden;
 }
 
 h3 {
@@ -181,10 +182,6 @@ a {
   background-color: #000;
 }
 
-.projects-title {
-  margin-top: -20px;
-}
-
 .project-title {
   font-weight: 200;
   font-size: 180%;
@@ -249,6 +246,11 @@ img.project-active {
   width: 70%;
   margin: 30px auto 0 auto;
   text-align: justify;
+}
+
+.icon-left i,
+.icon-right i {
+  font-size: 225%;
 }
 
 .icon-left {

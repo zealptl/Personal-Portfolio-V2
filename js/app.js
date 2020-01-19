@@ -73,10 +73,9 @@ var aboutTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
 aboutTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
 aboutTl.from(".about-underline", 0.5, { width: 0 });
-aboutTl.from(".about-container", 0.8, {
+aboutTl.from(".about-container", 0.5, {
   y: 100,
-  opacity: 0,
-  ease: Back.easeOut.config(1.7)
+  opacity: 0
 });
 aboutTl.from(
   ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
@@ -94,7 +93,7 @@ var projectsTl = new TimelineMax();
 const projectsController = new ScrollMagic.Controller();
 projectsTl.from(".projects-title", 0.5, { x: -200, opacity: 0 });
 projectsTl.from(".projects-underline", 0.5, { width: 0 });
-projectsTl.from(".project-container", 0.8, {
+projectsTl.from(".project-container", 0.5, {
   y: 100,
   opacity: 0,
   ease: Back.easeOut.config(1.7)
@@ -102,17 +101,16 @@ projectsTl.from(".project-container", 0.8, {
 projectsTl.from(".dots", 0.5, { opacity: 0 });
 projectsTl.fromTo(
   ".icon-left, .icon-right",
-  0.8,
+  1.5,
   {
     y: -100,
-    opacity: 0,
-    scale: 0
+    opacity: 0
   },
   {
     y: 0,
     opacity: 1,
-    scale: 1.5,
-    ease: Back.easeOut.config(1.7)
+
+    ease: Bounce.easeOut
   }
 );
 
@@ -156,4 +154,10 @@ new Glider(document.querySelector(".glider"), {
     prev: ".glider-prev",
     next: ".glider-next"
   }
+});
+
+$("header").css({ height: $(window).height() });
+$(window).on("resize", function() {
+  $("header").css({ height: $(window).height() });
+  $("body").css({ width: $(window).width() });
 });

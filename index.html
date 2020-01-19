@@ -17,20 +17,23 @@
       <div class="loader"></div>
     </div>
     <section class="landing-page">
-      <svg class="svg-logo" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path class="bottom-semi-circ" d="M0 75C0 94.8912 7.90176 113.968 21.967 128.033C36.0322 142.098 55.1088 150 75 150C94.8912 150 113.968 142.098 128.033 128.033C142.098 113.968 150 94.8912 150 75L75 75L0 75Z" fill="white"/>
-        <path class="top-semi-circ" d="M150 75C150 55.1088 142.098 36.0322 128.033 21.967C113.968 7.90177 94.8912 1.50175e-06 75 0C55.1088 -1.50175e-06 36.0322 7.90176 21.967 21.967C7.90177 36.0322 3.00349e-06 55.1088 0 75L75 75L150 75Z" fill="white"/>
-        <path class="left-triangle" d="M25 125V25H125L25 125Z" fill="white"/>
-        <path class="right-triangle" d="M125 25L125 125L25 125L125 25Z" fill="white"/>
-      </svg>
-      <svg
+      <div class="logo-container">
+        <svg class="svg-logo" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="bottom-semi-circ" d="M0 75C0 94.8912 7.90176 113.968 21.967 128.033C36.0322 142.098 55.1088 150 75 150C94.8912 150 113.968 142.098 128.033 128.033C142.098 113.968 150 94.8912 150 75L75 75L0 75Z" fill="white"/>
+          <path class="top-semi-circ" d="M150 75C150 55.1088 142.098 36.0322 128.033 21.967C113.968 7.90177 94.8912 1.50175e-06 75 0C55.1088 -1.50175e-06 36.0322 7.90176 21.967 21.967C7.90177 36.0322 3.00349e-06 55.1088 0 75L75 75L150 75Z" fill="white"/>
+          <path class="left-triangle" d="M25 125V25H125L25 125Z" fill="white"/>
+          <path class="right-triangle" d="M125 25L125 125L25 125L125 25Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="hero-text-container">
+        <svg
         class="svg-hero-text"
         width="567"
         height="92"
         viewBox="0 0 567 92"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-      >
+        >
         <path
           d="M13.96 80.32H54.76V89.8H1V81.16L41.56 15.64H1.48V6.16H54.52V14.8L13.96 80.32Z"
           stroke="#fff"
@@ -61,7 +64,9 @@
           stroke="#fff"
         />
         <path d="M566.304 1V89.8H555.384V1H566.304Z" stroke="#fff" />
-      </svg>
+        </svg>
+      </div>
+      
       <div class="hero-description">
         <h1 class="typed-description"></h1>
       </div>
@@ -277,6 +282,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <script src="js/glider.min.js"></script>
     <script src="js/app.js"></script>
   </body>
