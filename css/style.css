@@ -235,6 +235,7 @@ a {
   -webkit-box-align: end;
   align-items: flex-end;
   width: 40%;
+  height: auto;
   position: relative;
 }
 
@@ -242,6 +243,7 @@ a {
   display: -webkit-box;
   display: flex;
   width: 28%;
+  height: auto;
   margin-top: 2%;
   margin-right: 2%;
   opacity: 0.5;
