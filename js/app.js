@@ -153,7 +153,45 @@ new Glider(document.querySelector(".glider"), {
   arrows: {
     prev: ".glider-prev",
     next: ".glider-next"
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToshow: 1,
+        slidesToScroll: 1,
+        itemWidth: 150,
+        duration: 0.25
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToshow: "auto",
+        slidesToScroll: "auto",
+        itemWidth: 150,
+        duration: 0.25
+      }
+    },
+    {
+      breakpoint: 414,
+      settings: {
+        slidesToshow: "auto",
+        slidesToScroll: "auto",
+        itemWidth: 150,
+        duration: 0.25
+      }
+    },
+    {
+      breakpoint: 375,
+      settings: {
+        slidesToshow: "auto",
+        slidesToScroll: "auto",
+        itemWidth: 150,
+        duration: 0.25
+      }
+    }
+  ]
 });
 
 $("header").css({ height: $(window).height() });
