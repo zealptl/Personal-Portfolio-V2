@@ -165,18 +165,18 @@ a {
 }
 
 .python-bar {
-  width: 10%;
+  width: 25%;
   background-color: #3572a5;
 }
 
-.swift-bar {
-  width: 20%;
-  background-color: #ffac45;
+.java-bar {
+  width: 30%;
+  background-color: #b07219;
 }
 
-.java-bar {
+.swift-bar {
   width: 10%;
-  background-color: #b07219;
+  background-color: #ffac45;
 }
 
 /* --------------------------------------- */
