@@ -51,7 +51,7 @@ a {
 /* LANDING PAGE */
 /* --------------------------------------- */
 .landing-page {
-  background-image: url(img/background.jpg);
+/*   background-image: url(img/background.jpg); */
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
