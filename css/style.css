@@ -138,15 +138,29 @@ a {
 .css-bar,
 .js-bar,
 .python-bar,
-.swift-bar,
 .java-bar {
   height: 100%;
   border-radius: 5px;
 }
 
 .cpp-bar {
-  width: 50%;
+  width: 65%;
   background-color: #f34b7d;
+}
+
+.java-bar {
+  width: 60%;
+  background-color: #b07219;
+}
+
+.js-bar {
+  width: 50%;
+  background-color: #f1e05a;
+}
+
+.python-bar {
+  width: 35%;
+  background-color: #3572a5;
 }
 
 .html-bar {
@@ -157,26 +171,6 @@ a {
 .css-bar {
   width: 65%;
   background-color: #563d7c;
-}
-
-.js-bar {
-  width: 30%;
-  background-color: #f1e05a;
-}
-
-.python-bar {
-  width: 25%;
-  background-color: #3572a5;
-}
-
-.java-bar {
-  width: 30%;
-  background-color: #b07219;
-}
-
-.swift-bar {
-  width: 10%;
-  background-color: #ffac45;
 }
 
 /* --------------------------------------- */
