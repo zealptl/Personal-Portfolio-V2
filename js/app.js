@@ -1,89 +1,89 @@
 /*--- SVG STOKE  ANIMATION ---*/
 let logoTl = anime.timeline({
   duration: 100,
-  easing: "easeInSine"
+  easing: 'easeInSine',
 });
 
 logoTl.add({
-  targets: ".svg-hero-text path",
+  targets: '.svg-hero-text path',
   strokeDashoffset: [anime.setDashoffset, 0],
   duration: 1125,
-  delay: function(el, i) {
+  delay: function (el, i) {
     return i * 125;
-  }
+  },
 });
 
 logoTl.add({
-  targets: ".svg-hero-text",
-  fill: "#fff"
+  targets: '.svg-hero-text',
+  fill: '#fff',
 });
 
 logoTl.add({
-  targets: ".svg-logo",
+  targets: '.svg-logo',
   duration: 1000,
-  translateY: ["-75%", "-15%"],
-  translateX: ["-50%", "-50%"],
+  translateY: ['-75%', '-15%'],
+  translateX: ['-50%', '-50%'],
   opacity: [0, 1],
-  easing: "easeOutBack"
+  easing: 'easeOutBack',
 });
 
 logoTl.add({
-  targets: ".top-semi-circ",
+  targets: '.top-semi-circ',
   duration: 300,
-  translateY: "-90px"
+  translateY: '-90px',
 });
 
 logoTl.add(
   {
-    targets: ".bottom-semi-circ",
+    targets: '.bottom-semi-circ',
     duration: 300,
-    translateY: "90px"
+    translateY: '90px',
   },
-  "-=300"
+  '-=300'
 );
 
 logoTl.add({
-  targets: ".left-triangle",
+  targets: '.left-triangle',
   duration: 250,
-  translateX: "-27px"
+  translateX: '-27px',
 });
 
 logoTl.add(
   {
-    targets: ".right-triangle",
+    targets: '.right-triangle',
     duration: 250,
-    translateX: "27px"
+    translateX: '27px',
   },
-  "-=250"
+  '-=250'
 );
 
 /*--- TYPED DESCRIPTION ANIMATION ---*/
-let typed = new Typed(".typed-description", {
-  strings: ["Student", "Developer", "Designer", "Techie"],
+let typed = new Typed('.typed-description', {
+  strings: ['Student', 'Developer', 'Designer', 'Techie'],
   smartBackspace: true,
   typeSpeed: 40,
   backSpeed: 40,
   showCursor: false,
   loop: true,
-  startDelay: 4000
+  startDelay: 4000,
 });
 
 /*--- ABOUT PAGE SCROLL ANIMATION ---*/
 var aboutTl = new TimelineMax();
 const aboutController = new ScrollMagic.Controller();
-aboutTl.from(".about-title", 0.5, { x: "-200", opacity: 0 });
-aboutTl.from(".about-underline", 0.5, { width: 0 });
-aboutTl.from(".about-container", 0.5, {
+aboutTl.from('.about-title', 0.5, { x: '-200', opacity: 0 });
+aboutTl.from('.about-underline', 0.5, { width: 0 });
+aboutTl.from('.about-container', 0.5, {
   y: 100,
-  opacity: 0
+  opacity: 0,
 });
 aboutTl.from(
-  ".cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar",
+  '.cpp-bar, .html-bar, .css-bar, .js-bar, .python-bar, .swift-bar, .java-bar',
   0.5,
   { width: 0 }
 );
 const aboutScene = new ScrollMagic.Scene({
-  triggerElement: ".about-page"
+  triggerElement: '.about-page',
 })
   .setTween(aboutTl)
   .addTo(aboutController);
@@ -91,31 +91,31 @@ const aboutScene = new ScrollMagic.Scene({
 /*--- PROJECTS PAGE SCROLL ANIMATION ---*/
 var projectsTl = new TimelineMax();
 const projectsController = new ScrollMagic.Controller();
-projectsTl.from(".projects-title", 0.5, { x: -200, opacity: 0 });
-projectsTl.from(".projects-underline", 0.5, { width: 0 });
-projectsTl.from(".project-container", 0.5, {
+projectsTl.from('.projects-title', 0.5, { x: -200, opacity: 0 });
+projectsTl.from('.projects-underline', 0.5, { width: 0 });
+projectsTl.from('.project-container', 0.5, {
   y: 100,
   opacity: 0,
-  ease: Back.easeOut.config(1.7)
+  ease: Back.easeOut.config(1.7),
 });
-projectsTl.from(".dots", 0.5, { opacity: 0 });
+projectsTl.from('.dots', 0.5, { opacity: 0 });
 projectsTl.fromTo(
-  ".icon-left, .icon-right",
+  '.icon-left, .icon-right',
   1.5,
   {
     y: -100,
-    opacity: 0
+    opacity: 0,
   },
   {
     y: 0,
     opacity: 1,
 
-    ease: Bounce.easeOut
+    ease: Bounce.easeOut,
   }
 );
 
 const projectsScene = new ScrollMagic.Scene({
-  triggerElement: ".projects-page"
+  triggerElement: '.projects-page',
 })
   .setTween(projectsTl)
   .addTo(projectsController);
@@ -125,77 +125,39 @@ function imageGallery(projectHighlight, projectPreview) {
   var hightlight = document.querySelector(projectHighlight);
   var previews = document.querySelectorAll(projectPreview);
 
-  previews.forEach(preview => {
-    preview.addEventListener("click", function() {
+  previews.forEach((preview) => {
+    preview.addEventListener('click', function () {
       var smallSrc = this.src;
       hightlight.src = smallSrc;
-      previews.forEach(preview => preview.classList.remove("project-active"));
-      preview.classList.add("project-active");
+      previews.forEach((preview) => preview.classList.remove('project-active'));
+      preview.classList.add('project-active');
     });
   });
 }
 
-imageGallery(".mansion-highlight", ".mansion-preview img");
-imageGallery(".gaming-highlight", ".gaming-preview img");
-imageGallery(".design-highlight", ".design-preview img");
-imageGallery(".living-highlight", ".living-preview img");
-imageGallery(".bushwick-highlight", ".bushwick-preview img");
-imageGallery(".bqx-highlight", ".bqx-preview img");
-imageGallery(".smallpox-highlight", ".smallpox-preview img");
+imageGallery('.mansion-highlight', '.mansion-preview img');
+imageGallery('.gaming-highlight', '.gaming-preview img');
+imageGallery('.design-highlight', '.design-preview img');
+imageGallery('.living-highlight', '.living-preview img');
+imageGallery('.bushwick-highlight', '.bushwick-preview img');
+imageGallery('.bqx-highlight', '.bqx-preview img');
+imageGallery('.smallpox-highlight', '.smallpox-preview img');
 
 /*--- CAROUSEL ---*/
-new Glider(document.querySelector(".glider"), {
+new Glider(document.querySelector('.glider'), {
   slidesToshow: 1,
-  dots: ".dots",
+  dots: '.dots',
   rewind: true,
   scrollLock: true,
   scrollLockDelay: 100,
   arrows: {
-    prev: ".glider-prev",
-    next: ".glider-next"
+    prev: '.glider-prev',
+    next: '.glider-next',
   },
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToshow: 1,
-        slidesToScroll: 1,
-        itemWidth: 150,
-        duration: 0.25
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToshow: "auto",
-        slidesToScroll: "auto",
-        itemWidth: 150,
-        duration: 0.25
-      }
-    },
-    {
-      breakpoint: 414,
-      settings: {
-        slidesToshow: "auto",
-        slidesToScroll: "auto",
-        itemWidth: 150,
-        duration: 0.25
-      }
-    },
-    {
-      breakpoint: 375,
-      settings: {
-        slidesToshow: "auto",
-        slidesToScroll: "auto",
-        itemWidth: 150,
-        duration: 0.25
-      }
-    }
-  ]
 });
 
-$("header").css({ height: $(window).height() });
-$(window).on("resize", function() {
-  $("header").css({ height: $(window).height() });
-  $("body").css({ width: $(window).width() });
+$('header').css({ height: $(window).height() });
+$(window).on('resize', function () {
+  $('header').css({ height: $(window).height() });
+  $('body').css({ width: $(window).width() });
 });
