@@ -10,7 +10,7 @@ html,
 body {
   color: #fff;
   background-color: #111;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 18px;
 }
@@ -154,7 +154,7 @@ a {
 }
 
 .js-bar {
-  width: 50%;
+  width: 90%;
   background-color: #f1e05a;
 }
 
@@ -190,7 +190,7 @@ a {
   display: block;
   height: 2px;
   background-color: #fa8231;
-  content: " ";
+  content: ' ';
   width: 100px;
   margin: 5px auto 0 auto;
 }
